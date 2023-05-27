@@ -13,6 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
     "browser-sync": "^2.27.11",
     "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
@@ -23,6 +24,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "7.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",

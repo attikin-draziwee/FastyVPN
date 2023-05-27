@@ -15,6 +15,8 @@ const sass = require('gulp-sass')(require('sass'));
 const glob = require('gulp-sass-glob');
 const cleanCss = require('gulp-clean-css');
 const prefix = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
 // JS -> legacy JS
 const babel = require('gulp-babel');
 const minJS = require('gulp-uglify');
@@ -59,8 +61,8 @@ task('copy:svg', () => src(`./${SRC}/icons/**/*.svg`)
 task('sass', () => src(STYLES, { sourcemaps: gulpIf(isProd != 'build', true, false) })
   .pipe(glob())
   .pipe(sass())
+  .pipe(postcss([autoprefixer()]))
   .pipe(concat('main.min.css'))
-  .pipe(prefix())
   .pipe(gulpIf(isProd == 'build', cleanCss({ level: 2 })))
   .pipe(dest(`${DIST}`, { sourcemaps: gulpIf(isProd != 'build', true, false) })));
 task('js', () => src(JS, { sourcemaps: gulpIf(isProd != 'build', true, false) })
