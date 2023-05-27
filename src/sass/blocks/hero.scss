@@ -1,0 +1,95 @@
+.hero {
+    background:  
+    linear-gradient(180deg, rgba(52, 45, 48, 1) 0%, // 
+    rgba(26, 20, 21, 0.72) 45.79%, //
+    rgb(22, 19, 19) 50.35%,//
+    rgba(8, 7, 7, 1) 85.06%,//
+    rgba(5, 5, 5, .6) 100%), url(img/textures/cubes.webp);
+    background-blend-mode: color-burn;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding-block: 1.3rem;
+    }
+
+    &__content {
+        height: 80%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include adaptive($tablet) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        @include adaptive($tablet) {
+            gap: .9rem;
+        }
+    }
+
+    &__main {
+        max-width: 30rem;
+        flex-grow: 1;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        @include adaptive($tablet) {
+            flex-grow: 1;
+            width: unset;
+            gap: 1rem;
+            justify-content: start;
+        }
+    }
+    &__promo {
+        flex-grow: 1;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptive($tablet) {
+            width: unset;
+            height: 60vh;
+        }
+    }
+    &__img {
+        height: 100%;
+        @include adaptive($laptop) {
+            height: 70vmin;
+        }
+        @include adaptive($tablet) {
+            height: 85%;
+        }
+    }
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__desc {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        &::after {
+            content: '👉';
+            @include adaptive($tablet) {
+                display: block;
+                content: '👇';
+            }
+        }
+    }
+    @include adaptive($tablet) {
+        gap: .3rem;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+

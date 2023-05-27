@@ -1,0 +1,25 @@
+header.header.header__container
+    .header__content
+        a.header__logo(href="index.html" title="Главная"): svg.logo.header__logo-img: use(xlink:href="sprite.svg#logo")
+        nav.nav.header__nav: ul.nav__menu.header__menu 
+            li.nav__item: a.nav__link(href="#") О нас
+            li.nav__item: a.nav__link(href="#") Наш продукт
+            li.nav__item: a.nav__link(href="#") Инструкция
+            li.nav__item: a.nav__link(href="#") Тариф
+            li.nav__item: a.nav__link(href="#") FAQ
+            li.nav__item: a.nav__link(href="#") Бонус
+    address.support.header__support
+        ul.support__list.header__support-list
+            li.support__item
+                a.support__link(href="https://t.me/FastyVPN" target="_blank")
+                    svg.support__img: use(xlink:href="sprite.svg#telegram")
+                    | @FastyVPN
+            li.support__item
+                a.support__link(href="mailto:support@fastyvpn.ru" target="_blank")
+                    svg.support__img: use(xlink:href="sprite.svg#email")
+                    | support@fastyvpn.ru
+        button.hamburger.header__hamburger
+            ul.hamburger-stick__list 
+                li.hamburger-stick__item
+                li.hamburger-stick__item
+                li.hamburger-stick__item

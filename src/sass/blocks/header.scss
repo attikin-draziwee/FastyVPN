@@ -1,0 +1,66 @@
+.header {
+    font-size: 0.66rem;
+    &__container {
+        box-sizing: content-box;
+        width: 100%;
+        max-height: 76px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptive($tablet) {
+            position:fixed;
+            width: 90vw;
+            max-height: none;
+            height: 10vh;
+        }
+    }
+    &__container * {
+        max-height: inherit;
+    }
+    &__content {
+        display: flex;
+        height: inherit;
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+    }
+    &__logo {
+        display: inline-block;
+        height: inherit;
+        flex-grow: 1;
+        @include adaptive($tablet) {
+            flex-grow: 0;
+        }
+        &-img {
+            width: 3.75rem;
+            height: 3.17rem;
+            @include adaptive($tablet) {
+                height: inherit;
+                width: 6rem;
+            }
+        }
+    }
+    &__nav {
+        flex-grow: 9;
+        @include adaptive($tablet) {
+            display: none;
+        }
+    }
+    &__support {
+        flex-grow: 0;
+        &-list {
+            @include adaptive($tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        @include adaptive($tablet) {
+            display: block;
+        }
+    }
+}

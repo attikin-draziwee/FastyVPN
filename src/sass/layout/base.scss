@@ -1,0 +1,130 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+:root {
+  font-size: $font-size;
+  @include adaptive($laptop) {
+    font-size: 21px;
+  }
+  @include adaptive($tablet) {
+    font-size: 3vmin;
+  }
+  font-weight: normal;
+  font-variant-numeric: lining-nums;
+  line-height: 1.4em;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+body {
+  background-color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: max(calc(100vw - 5rem), 90%);
+  max-height: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.support {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: underline;
+}
+  &__img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.heading {
+  &-one {
+    font-family: Commissioner;
+    font-weight: 500;
+    font-size: 2.67rem;
+    margin: 0;
+  }
+  &--tg {
+    font-family: Raleway;
+    color: $blue;
+    font-weight: 600;
+  }
+}
+
+.subtitle {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  &--increase {
+    font-size: 1.7rem;
+  }
+  @include adaptive($tablet) {
+    text-align: center;
+  }
+}
+
+.CTA {
+  display: inline-block;
+  padding: 0.7em 1.7em ;
+  background-color: $blue;
+  border-radius: 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  @include adaptive($tablet) {
+    font-size: 1.7rem;
+  }
+}
+
+.hamburger-stick {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  &__item {
+    display: inline-block;
+    width: 3rem;
+    height: .3rem;
+    background-color: $silver;
+  }
+}
+.hamburger {
+}

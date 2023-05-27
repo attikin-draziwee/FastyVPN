@@ -1,0 +1,16 @@
+extends pug/layout/template.pug
+
+append variables
+  - title = 'VPN в Вашем Telegram';
+  - mainCSS = 'main.min.css';
+
+append links
+  link(rel="shortcut icon", href="img/favicon.webp", type="image/x-icon")
+
+
+append content
+  include pug/blocks/hero.pug
+
+
+append scripts
+  script(src="main.min.js")
