@@ -1,6 +1,7 @@
 #folders
 /node_modules
 /src/fonts/**/*
+/src/video/**/*
 
 #files
 .DS_Store

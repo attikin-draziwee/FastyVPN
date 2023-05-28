@@ -30,9 +30,9 @@ const ttfToWoff = require('gulp-ttf2woff');
 const ttfToWoff2 = require('gulp-ttf2woff2');
 const fontfacegen = require('./fonts');
 
-task('clean', () => src(`${DIST}/*`, { read: false, ignore: [`${DIST}/img`, `${DIST}/fonts`] })
+task('clean', () => src(`${DIST}/*`, { read: false, ignore: [`${DIST}/img`, `${DIST}/fonts`, `${DIST}/video`] })
   .pipe(clean()))
-task('cleanAll', () => src(`${DIST}/*`, { read: false, ignore: [`${DIST}/fonts`] })
+task('cleanAll', () => src(`${DIST}/*`, { read: false, ignore: [`${DIST}/fonts`, `${DIST}/video`] })
   .pipe(clean()))
 
 task('browser', function () {
@@ -48,6 +48,8 @@ task('copy:img', () => src(`./${SRC}/img/**/*`)
   .pipe(minImg([minImg.mozjpeg({ quality: 100, progressive: true }), minImg.optipng({ optimizationLevel: 2 }),]))
   .pipe(webpImg())
   .pipe(dest(`${DIST}/img`)));
+task('copy:video', () => src(`./${SRC}/video/**/*`)
+  .pipe(dest(`${DIST}/video`)));
 task('copy:svg', () => src(`./${SRC}/icons/**/*.svg`)
   // .pipe(svgo())
   .pipe(svgSprite({

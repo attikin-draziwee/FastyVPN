@@ -1,0 +1,122 @@
+.how {
+    overflow: hidden;
+    background: linear-gradient(0deg, #0d0a0bc0 100%, rgba(0, 0, 0, 0.856287) 7.44%, rgba(0, 0, 0, 0.709913) 11.41%, rgba(0, 0, 0, 0) 19.48%), linear-gradient(180deg, #181213 0%, rgba(24, 18, 19, 0) 14.14%), linear-gradient(180deg, #0d0a0b00 40%,#0d0a0bc0 100%), url(img/textures/tg_pattern.webp);
+    position: relative;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include adaptive($tablet) {
+            gap: 2rem;
+        }
+    }
+    &__content, &__promo, &__messages {
+        flex-grow: 1;
+    }
+    &__heading {
+        flex-grow: 0;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        @include adaptive($tablet) {
+            flex-direction: column-reverse;
+            justify-content: space-between
+            ;
+        }
+    }
+    &__promo, &__messages {
+        width: 50%;
+        @include adaptive($tablet) {
+            width: 100%;
+        }
+    }
+    &__promo {
+        &-content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40vw;
+        }
+    }
+    &__img {
+        width: inherit;
+        position: relative;
+        @include adaptive($tablet) {
+            left: 50%;
+            bottom: 0;
+            transform: translate(-25%, 20%);
+        }
+    }
+    &__video {
+        position: absolute;
+        left: 50%;
+        top: 1.75%;
+        width: 14vw;
+        border-radius: 2vw;
+        @include adaptive($tablet) {
+            width: 35vw;
+            left: 81%;
+            bottom: 0%;
+            transform: translateY(21%);
+            border-radius: 5vw;
+        }
+    }
+}
+
+.message {
+    font-size: 1.2vmax;
+    @include adaptive($tablet) {
+        font-size: 1.6vmax;
+        height: 100%;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        height: inherit;
+    }
+    &__item {
+        position: relative;
+        line-height: 1.4em;
+        padding: 0.6rem;
+        background: linear-gradient(180deg, #453241 0%, #3B2935 100%);
+        border-radius: 0.5em;
+        &--link {
+            text-decoration: underline;
+            color: $blue;
+        }
+        &:last-child {
+            border-radius: .5rem .5rem .5rem 0;
+            ::after {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 2px;
+                background-color: transparent;
+                border: 8px solid; 
+                border-color: transparent #3B2935 #3B2935 transparent;
+                position: absolute;
+                left: 0;
+                transform: translateX(-100%);
+                bottom: 0;
+            }
+        }
+    }
+    &__button {
+        padding: 0;
+        background: $accent-gradient;
+        & > button {
+            padding: .6rem;
+            font-weight: 600;
+            font-size: 2vmax;
+            width: 100%;
+            height: 100%;
+            @include adaptive($mob) {
+                font-size: 2.5vmax;
+            }
+        }
+    }
+}

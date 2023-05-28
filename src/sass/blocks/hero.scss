@@ -78,8 +78,11 @@
     flex-direction: row;
     align-items: center;
     &__desc {
-        font-size: 2vmax;
+        font-size: 1rem;
         line-height: 1.2em;
+        @include adaptive($tablet) {
+            font-size: 2vmax;
+        }
         &::after {
             content: '👉';
             @include adaptive($tablet) {
