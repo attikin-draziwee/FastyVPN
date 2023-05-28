@@ -44,9 +44,13 @@ a {
 
 .container {
   width: max(calc(100vw - 5rem), 90%);
+  padding-block: 1.3rem;
   max-height: 100vh;
   height: 100vh;
   margin: 0 auto;
+  @include adaptive($tablet) {
+    padding-block: 6rem;
+  }
 }
 
 .logo {
@@ -75,11 +79,17 @@ a {
 }
 
 .heading {
+  font-family: Commissioner;
+  font-weight: 500;
+  margin: 0;
   &-one {
-    font-family: Commissioner;
-    font-weight: 500;
     font-size: 2.67rem;
-    margin: 0;
+  }
+  &-two {
+    font-size: 2rem;
+    @include adaptive($tablet) {
+      font-size: 2.5rem;
+  }
   }
   &--tg {
     font-family: Raleway;
@@ -92,7 +102,7 @@ a {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.3rem;
-  line-height: 1.4rem;
+  line-height: 1.4em;
   &--increase {
     font-size: 1.7rem;
   }
@@ -104,7 +114,7 @@ a {
 .CTA {
   display: inline-block;
   padding: 0.7em 1.7em ;
-  background-color: $blue;
+  background-color: $orange;
   border-radius: 2.5rem;
   font-size: 1.3rem;
   font-weight: 600;

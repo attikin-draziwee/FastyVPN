@@ -1,0 +1,153 @@
+.about {
+    overflow: hidden;
+    background: linear-gradient(180deg, #0d0a0b91 0%, rgba(0, 0, 0, 0.0434782) 25%, rgba(0, 0, 0, 0) 47.92%, rgba(0, 0, 0, 0.27) 75.52%, #0d0a0bda 100%),url(img/textures/cubes.webp), radial-gradient(41.66% 35.19% at 87.75% 41.91%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(37.26% 35.25% at 16.06% 56.76%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%);
+    background-blend-mode: normal, color-burn;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+    }
+
+    &__heading {
+        flex-grow: 0;
+        margin-bottom: 1.3rem;
+    }
+
+    &__list {
+        flex-grow: 1;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3vmin;
+        @include adaptive($tablet) {
+            justify-content: center;
+            display: flex;
+            width: max-content;
+        }
+    }
+    &__item {
+        cursor: pointer;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.5);
+        &:nth-child(1) .about__background {
+            background-image: url(img/about/bg/bg-1.webp)
+        }
+        &:nth-child(2) .about__background {
+            background-image: url(img/about/bg/bg-2.webp)
+        }
+        &:nth-child(3) .about__background {
+            background-image: url(img/about/bg/bg-3.webp)
+        }
+        &:nth-child(4) .about__background {
+            background-image: url(img/about/bg/bg-4.webp)
+        }
+        &:nth-child(5) .about__background {
+            background-image: url(img/about/bg/bg-5.webp)
+        }
+        &:nth-child(6) .about__background {
+            background-image: url(img/about/bg/bg-6.webp)
+        }
+        &:hover:not(.about__item--active) {
+            & .about__desc::before {
+                opacity: 1;
+            }
+        }
+        &--active {
+            & .about__title {
+                font-size: inherit;
+                text-align: left;
+                flex-grow: 0;
+                font-weight: 700;
+            }
+            & .about__text {
+                display: block;
+            }
+            & .about__desc {
+                font-size: 2vmin;
+                @include adaptive($laptop) {
+                    font-size: 1.75vmin;
+                }
+                @include adaptive($tablet) {
+                    font-size: 2.5vmax;
+                }
+                color: $black;
+                line-height: 1.4em;
+                align-items: start;
+                justify-content: start;
+                max-height: 50%;
+                padding: .6em;
+                background: rgba(#F0F3F6, .8);
+            }
+            & .about__background {
+                max-height: 50%;
+                background-position: center center;
+            }
+            & .about__icon {
+                width: 30%;
+                @include adaptive($mob) {
+                    width: 20vmax;
+                }
+            }
+            @include adaptive($tablet) {
+                width: 80vw;
+            }
+        }
+    }
+    &__background, &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__background {
+        background-size:cover;
+        border-radius: .5rem .5rem 0 0;
+        flex-grow: 1;
+    }
+    &__icon {
+        padding-block: 1rem;
+        width: 40%;
+        -o-object-fit:contain;
+        object-fit:contain;
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        max-height: 3rem;
+        height: 100%;
+        border-radius: 0 0 .5rem .5rem;
+        background: rgba(#F0F3F6, .1);
+        -webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(4px);
+        position: relative;
+        &::before {
+            transition: .3s ease;
+            content: "";
+            z-index: -1;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(174, 100, 249, 0.8) 0%, rgba(206, 43, 43, 0.8) 100%);
+            border-radius: 0 0 .5rem 0.5rem;
+            opacity: 0;
+        }
+    }
+    &__title {
+        font-size: .9rem;
+        @include adaptive($tablet) {
+            font-size: 80%;
+        }
+        font-weight: 600;
+        text-align: center;
+        flex-grow: 1;
+    }
+    &__text {
+        display: none;
+    }
+
+}
