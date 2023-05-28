@@ -112,6 +112,7 @@ a {
 }
 
 .CTA {
+  text-align: center;
   display: inline-block;
   padding: 0.7em 1.7em ;
   background-color: $orange;
@@ -120,6 +121,9 @@ a {
   font-weight: 600;
   @include adaptive($tablet) {
     font-size: 1.7rem;
+  }
+  &--blue {
+    background-color: $blue;
   }
 }
 

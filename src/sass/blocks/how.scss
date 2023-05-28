@@ -1,6 +1,6 @@
 .how {
     overflow: hidden;
-    background: linear-gradient(0deg, #0d0a0bc0 100%, rgba(0, 0, 0, 0.856287) 7.44%, rgba(0, 0, 0, 0.709913) 11.41%, rgba(0, 0, 0, 0) 19.48%), linear-gradient(180deg, #181213 0%, rgba(24, 18, 19, 0) 14.14%), linear-gradient(180deg, #0d0a0b00 40%,#0d0a0bc0 100%), url(img/textures/tg_pattern.webp);
+    background: linear-gradient(0deg, #0d0a0bc0 100%, rgba(0, 0, 0, 0.856287) 7.44%, rgba(0, 0, 0, 0.709913) 11.41%, rgba(0, 0, 0, 0) 19.48%), linear-gradient(180deg, #181213 0%, rgba(24, 18, 19, 0) 14.14%), linear-gradient(180deg, #0d0a0b00 40%,#0d0a0b 100%), url(img/textures/tg_pattern.webp);
     position: relative;
     &__container {
         display: flex;
@@ -69,7 +69,7 @@
 .message {
     font-size: 1.2vmax;
     @include adaptive($tablet) {
-        font-size: 1.6vmax;
+        font-size: 1.7vmax;
         height: 100%;
     }
     &__list {

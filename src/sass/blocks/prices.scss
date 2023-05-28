@@ -1,0 +1,157 @@
+.price {
+    background: linear-gradient(180deg, #0d0a0b 0%, #0d0a0baf  25%), linear-gradient(180deg, #0d0a0b8e 65%, #0d0a0b  100%), url(img/textures/abstract.webp) no-repeat;
+    background-size: cover;
+    background-blend-mode: normal, normal, color-burn;
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__heading {
+        flex-grow: 0;
+        margin-bottom: 1.3rem;
+    }
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        align-items: start;
+        width: 100%;
+    }
+    &__list {
+        justify-content: stretch;
+        align-items: start;
+        width: inherit;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1.3rem;
+        @include adaptive($tablet) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+    &__item, &__header {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        height: 100%;
+        width: 100%;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptive($tablet) {
+            align-items: stretch;
+        }
+        &:nth-child(1) .price__img {
+            background: url(img/prices/standart_bg.webp);
+            background-size: cover;
+        }
+        &:nth-child(2) .price__img {
+            background: url(img/prices/free_bg.webp);
+            background-size: cover;
+        }
+        &:nth-child(3) .price__img {
+            background: url(img/prices/premium_bg.webp);
+            background-size: cover;
+        }
+        @include adaptive($tablet) {
+            flex-direction: row;
+        }
+    }
+    &__header {
+        flex-grow: 0;
+        width: 100%;
+        box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.15);
+    }
+    &__img {
+        flex-grow: 1;
+        border-radius: 0.5em 0.5em 0 0 ;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptive($mob) {
+            height: 50%;
+        }
+    }
+    &__icon {
+        text-align: center;
+        height: 30vmin;
+        padding: 1.9rem;
+        @include adaptive($tablet) {
+            height: 20vmin;
+            padding: 1rem;
+        }
+    }
+    &__title {
+        text-align: center;
+        display: block;
+        background: $accent-gradient;
+        border-radius: 0 0 .5em .5em;
+        font-family: 'Commissioner';
+        font-size: 1.6vmax;
+        font-weight: 500;
+        line-height: 1.4em;
+        padding: 1em 2em;
+        &--premium {
+            padding: 1em 1em;
+            background: $gold;
+        }
+        @include adaptive($tablet) {
+            font-size: 2vmax;
+        }
+        @include adaptive($mob) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            padding: 0;
+        }
+    }
+    &__comparison {
+        width: 100%;
+        padding: 0.6rem;
+    }
+    &__CTA {
+        font-size: 2vmax;
+    }
+    &__footer {
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include adaptive($tablet) {
+            min-height: 100%;
+        }
+    }
+}
+
+.comparison {
+    flex-grow: 1;
+    background: rgba(240, 243, 246, 0.1);
+    box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    border-radius: 12px;
+    &__list {
+        list-style:disc;
+        list-style-position: inside;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2vmax;
+        line-height: 1.4em;
+        &--premium {
+            list-style: none;
+            font-weight: 500;
+        }
+        @include adaptive($tablet) {
+            font-size: 1.7vmax;
+        }
+    }
+    &--premium {
+        background: $gold;
+    }
+}
