@@ -1,9 +1,12 @@
-html {
-  height: 100%;
-}
+html,
 body {
   height: 100%;
+  position: relative;
+    &.locked {
+      overflow: hidden;
+  }
 }
+
 :root {
   font-size: $font-size;
   @include adaptive($laptop) {
@@ -54,6 +57,20 @@ a {
   }
   @include adaptive($mob) {
     padding-block: 6rem;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &-content {
+    position: relative;
+    flex: 1;
+    transition: 0.3s all ease;
+    will-change: transition;
   }
 }
 
@@ -148,4 +165,25 @@ a {
   }
 }
 .hamburger {
+}
+
+.dn {
+  display: none !important;
+}
+
+.close__icon {
+  width: inherit;
+  height: inherit;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+  &__link {
+    font-family: Commissioner;
+    font-size: 5vmax;
+  }
 }

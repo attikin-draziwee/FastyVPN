@@ -58,6 +58,9 @@
         @include adaptive($tablet) {
             font-size: 2.2vmax;
         }
+        @include adaptive($mob) {
+            font-size: 2vmax;
+        }
         &--active .faq__answer{
             display: flex;
         }
@@ -94,6 +97,18 @@
                 right: unset;
                 transform: translateX(-100%);
             }      
+        }
+        &.faq__item--active {
+            &:nth-last-child(-n+2) .faq__question {
+                &::after {
+                    border-color: transparent #8e52c8 #8e52c8 transparent;
+                }    
+            }
+            &:last-child .faq__question {
+                &::after {
+                    border-color: transparent transparent #a62525 #a62525 ;
+                }
+            }
         }
         &:last-child .faq__question  {
             border-radius: .5em .5em 0 .5em;

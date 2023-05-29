@@ -1,7 +1,5 @@
-class people {
-  sayhu() {
-    console.log('a');
-  }
+let isModal = false;
+
+function copyClipBoard() {
+  navigator.clipboard.writeText("3DAYSFREE");
 }
-const a = 5;
-console.log(a);

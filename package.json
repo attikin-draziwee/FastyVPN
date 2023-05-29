@@ -34,6 +34,9 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
+    "jquery": "^3.7.0",
+    "jquery-touchswipe": "^1.6.19",
+    "owl.carousel": "^2.3.4",
     "sass": "^1.58.0"
   },
   "browserslist": [
@@ -43,6 +46,7 @@
     "not dead"
   ],
   "dependencies": {
+    "mobile-detect": "^1.4.5",
     "normalize.css": "^8.0.1",
     "reset.css": "^2.0.2"
   }

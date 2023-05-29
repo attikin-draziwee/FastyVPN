@@ -10,8 +10,8 @@
     &__container {
         display: flex;
         flex-direction: column;
-        @include adaptive($tablet) {
-            padding-block: 1.3rem;
+        @include adaptive($mob) {
+            padding-block: 6rem;
         }
     }
 

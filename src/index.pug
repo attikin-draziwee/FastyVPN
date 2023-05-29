@@ -7,7 +7,6 @@ append variables
 append links
   link(rel="shortcut icon", href="img/favicon.webp", type="image/x-icon")
 
-
 append content
   include pug/blocks/hero.pug
   include pug/blocks/about.pug
@@ -18,3 +17,14 @@ append content
 
 append scripts
   script(src="main.min.js")
+  script(type="html/template" id="overlay")
+    a(href="#" class="close overlay__close")
+      svg.close__icon
+        use(xlink:href="sprite.svg#close")
+    nav.menu.overlay__menu
+      ul.menu__list.overlay__list
+        li.menu__item: a.menu__link(href="#" data-to=".about") О нас
+        li.menu__item: a.menu__link(href="#" data-to=".how") Инструкция
+        li.menu__item: a.menu__link(href="#" data-to=".price") Тариф
+        li.menu__item: a.menu__link(href="#" data-to=".faq") FAQ
+        li.menu__item: a.menu__link(href="#" data-to=".final") Бонус
