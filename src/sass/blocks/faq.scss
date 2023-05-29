@@ -76,9 +76,11 @@
                 }
             }
         }
-        &:last-child .faq__question {
-            &::after {
-                content: none;
+        @include adaptive($tablet) {
+            &:last-child .faq__question {
+                &::after {
+                    content: none;
+                }
             }
         }
         &:nth-last-child(-n+2) .faq__question,&:nth-child(even) .faq__desc {
