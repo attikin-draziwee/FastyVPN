@@ -25,6 +25,7 @@
         top: 3%;
         transform: translateX(-50%);
         @include adaptive($tablet) {
+            top: 0;
             display: flex !important; 
         }
     }
