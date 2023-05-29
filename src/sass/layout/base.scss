@@ -191,6 +191,11 @@ a {
   }
 }
 
+.link {
+  text-decoration: underline;
+  color: $blue;
+}
+
 .owl {
   &-dot {
     width: 1rem;

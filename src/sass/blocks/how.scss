@@ -84,10 +84,6 @@
         padding: 0.6rem;
         background: $message;
         border-radius: 0.5em;
-        &--link {
-            text-decoration: underline;
-            color: $blue;
-        }
         &:last-child {
             border-radius: .5rem .5rem .5rem 0;
             &::after {

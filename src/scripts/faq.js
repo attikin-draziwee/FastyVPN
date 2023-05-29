@@ -7,7 +7,9 @@ firstTeamItem.classList.add('faq__item--active');
 
 
 teamList.addEventListener('click', e => {
-  e.preventDefault();
+  if (!e.target.classList.contains('link')) {
+    e.preventDefault();
+  }
   if (e.target.classList.contains('faq__question')) {
     containsClass('faq__item--active', e.target.parentNode);
   }
