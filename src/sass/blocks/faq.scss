@@ -1,0 +1,183 @@
+.faq {
+    overflow: hidden;
+    background: radial-gradient(50.85% 51.54% at 50% 50%, rgba(0, 0, 0, 0) 0%, #0d0a0b 89.06%), url(img/textures/dots.webp), #000000;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+    }
+    &__list {
+        flex-grow: 1;
+        height: inherit;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.3em;
+        @include adaptive($tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__question, &__desc {
+        border-radius: .5em;
+    }
+    &__question {
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        padding: 0.6em;
+        background: $message;
+    }
+    &__answer {
+        display: none;
+        flex-direction: row;
+        gap: 0.3em;
+        line-height: 1.4em;
+        align-items: end;
+    }
+    &__desc {
+        position: relative;
+        flex-grow: 1;
+        padding: 0.6em;
+        background: $silver;
+        color: $black;
+    }
+    &__avatar {
+        flex-grow: 0;
+        width: 3.3rem;
+        border-radius: 50%;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+        position: relative;
+        width: 100%;
+        font-size: 2.6vmin;
+        line-height: 1.4em;
+        @include adaptive($tablet) {
+            font-size: 2.2vmax;
+        }
+        &--active .faq__answer{
+            display: flex;
+        }
+        &:nth-last-child(-n+2) .faq__question {
+            &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 1px;
+                background-color: transparent;
+                border: 8px solid; 
+                position: absolute;
+                bottom: 0;
+                @include adaptive($tablet) {
+                    content: none;
+                }
+            }
+        }
+        &:last-child .faq__question {
+            &::after {
+                content: none;
+            }
+        }
+        &:nth-last-child(-n+2) .faq__question,&:nth-child(even) .faq__desc {
+            border-radius: .5em .5em .5em 0;
+            @include adaptive($tablet) {
+                border-radius: .5em;
+            }
+            &::after {
+                border-color: transparent #3B2935 #3B2935 transparent;
+                left: 0;
+                right: unset;
+                transform: translateX(-100%);
+            }      
+        }
+        &:last-child .faq__question  {
+            border-radius: .5em .5em 0 .5em;
+            &::after {
+                border-color: transparent transparent #3B2935 #3B2935 ;
+                left: unset;
+                right: 0;
+                transform: translateX(100%);
+            }
+            @include adaptive($tablet) {
+                border-radius: .5em;
+            }
+        }
+        &:nth-child(odd) .faq__desc {
+            border-radius: .5em .5em 0 .5em;
+            &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 1px;
+                background-color: transparent;
+                border: 8px solid; 
+                position: absolute;
+                bottom: 0;
+                border-color: transparent transparent $silver $silver ;
+                left: unset;
+                right: 0;
+                transform: translateX(100%);
+            }
+        }
+        &:nth-child(even) .faq__answer {
+            flex-direction: row-reverse;
+            @include adaptive($tablet) {
+                flex-direction: row;
+            }
+        }
+        &:nth-child(even) .faq__desc {
+            &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 1px;
+                background-color: transparent;
+                border: 8px solid; 
+                position: absolute;
+                bottom: 0;
+                border-color: transparent $silver $silver transparent ;
+                left: 0;
+                right: unset;
+                transform: translateX(-100%);
+            }
+            @include adaptive($tablet) {
+                border-radius: .5em .5em 0 .5em;
+                &::after {
+                    border-color: transparent transparent $silver $silver;
+                    left: unset;
+                    right: 0;
+                    transform: translateX(100%);
+                }
+            }
+        }
+        &--active {
+            & .faq__question {
+                background: $accent-gradient;
+            }
+        }
+    }
+    &__user {
+        flex-grow: 0;
+        width: fit-content;
+        border-radius: 50%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), linear-gradient(180deg, #5B9C3A 0%, #2D4F2B 100%);
+        @include adaptive($tablet) {
+            display: none;
+        }
+        &-avatar {
+            padding: .2rem;
+            width: 3.3rem;
+            height: 100%;
+            &--mirror {
+                -moz-transform: scale(-1, 1);
+                -o-transform: scale(-1, 1);
+                -webkit-transform: scale(-1, 1);
+                transform: scale(-1, 1);
+            }
+        }
+    }
+    
+}

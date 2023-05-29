@@ -8,11 +8,6 @@
         height: 100%;
     }
 
-    &__heading {
-        flex-grow: 0;
-        margin-bottom: 1.3rem;
-    }
-
     &__list {
         flex-grow: 1;
         display: grid;
@@ -74,7 +69,7 @@
                     font-size: 1.75vmin;
                 }
                 @include adaptive($tablet) {
-                    font-size: 1.8vmax;
+                    font-size: 2.2vmax;
                 }
                 color: $black;
                 line-height: 1.4em;

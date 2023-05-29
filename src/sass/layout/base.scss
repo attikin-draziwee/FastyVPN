@@ -26,6 +26,7 @@ body {
 }
 
 button {
+  font-variant-numeric: lining-nums;
   cursor: pointer;
   outline: none;
   color: inherit;
@@ -49,6 +50,9 @@ a {
   height: 100vh;
   margin: 0 auto;
   @include adaptive($tablet) {
+    padding-block: 4rem;
+  }
+  @include adaptive($mob) {
     padding-block: 6rem;
   }
 }
@@ -87,6 +91,8 @@ a {
   }
   &-two {
     font-size: 2rem;
+    margin-bottom: 1.3rem;
+    flex-grow: 0;
     @include adaptive($tablet) {
       font-size: 2.5rem;
   }
@@ -112,12 +118,13 @@ a {
 }
 
 .CTA {
+  white-space: nowrap;
   text-align: center;
   display: inline-block;
-  padding: 0.7em 1.7em ;
+  padding: 0.7em ;
   background-color: $orange;
   border-radius: 2.5rem;
-  font-size: 1.3rem;
+  font-size: 1.8vmax;
   font-weight: 600;
   @include adaptive($tablet) {
     font-size: 1.7rem;
@@ -131,12 +138,12 @@ a {
   &__list {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .5em;
   }
   &__item {
     display: inline-block;
-    width: 3rem;
-    height: .3rem;
+    width: 6vmin;
+    height: .6vmin;
     background-color: $silver;
   }
 }

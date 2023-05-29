@@ -7,14 +7,11 @@
         flex-direction: column;
         justify-content: space-between;
         @include adaptive($tablet) {
-            gap: 2rem;
+            
         }
     }
     &__content, &__promo, &__messages {
         flex-grow: 1;
-    }
-    &__heading {
-        flex-grow: 0;
     }
     &__content {
         display: flex;
@@ -69,7 +66,7 @@
 .message {
     font-size: 1.2vmax;
     @include adaptive($tablet) {
-        font-size: 1.7vmax;
+        font-size: 2vmax;
         height: 100%;
     }
     &__list {
@@ -82,7 +79,7 @@
         position: relative;
         line-height: 1.4em;
         padding: 0.6rem;
-        background: linear-gradient(180deg, #453241 0%, #3B2935 100%);
+        background: $message;
         border-radius: 0.5em;
         &--link {
             text-decoration: underline;
@@ -90,11 +87,11 @@
         }
         &:last-child {
             border-radius: .5rem .5rem .5rem 0;
-            ::after {
+            &::after {
                 content: "";
                 display: block;
-                width: 2px;
-                height: 2px;
+                width: 1px;
+                height: 1px;
                 background-color: transparent;
                 border: 8px solid; 
                 border-color: transparent #3B2935 #3B2935 transparent;

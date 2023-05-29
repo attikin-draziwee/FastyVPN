@@ -35,7 +35,11 @@
             gap: .9rem;
         }
     }
-
+    &__subtitle {
+        @include adaptive($mob) {
+            font-size: 2.4vmax;
+        }
+    }
     &__main {
         max-width: 30rem;
         flex-grow: 1;
@@ -71,6 +75,13 @@
             height: 85%;
         }
     }
+    &__CTA {
+        white-space: nowrap;
+        @include adaptive($tablet) {
+            white-space:normal;
+            font-size: 2.2vmax;
+        }
+    }
 }
 
 .action {
@@ -81,7 +92,7 @@
         font-size: 1rem;
         line-height: 1.2em;
         @include adaptive($tablet) {
-            font-size: 2vmax;
+            font-size: 2.2vmax;
         }
         &::after {
             content: '👉';
