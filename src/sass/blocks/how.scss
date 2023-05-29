@@ -35,28 +35,31 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 40vw;
+            width: 38vw;
+            @include adaptive($mob) {
+                width: 44vw;
+            }
         }
     }
     &__img {
         width: inherit;
         position: relative;
         @include adaptive($tablet) {
-            left: 50%;
+            left: 45%;
             bottom: 0;
-            transform: translate(-25%, 20%);
+            transform: translate(-25%, 10%);
         }
     }
     &__video {
         position: absolute;
         left: 50%;
         top: 1.75%;
-        width: 14vw;
+        width: 13.3vw;
         border-radius: 2vw;
         @include adaptive($tablet) {
-            width: 35vw;
-            left: 81%;
-            bottom: 0%;
+            width: 41vw;
+            left: 68%;
+            top: -10%;
             transform: translateY(21%);
             border-radius: 5vw;
         }
