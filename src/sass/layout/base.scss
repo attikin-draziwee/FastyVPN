@@ -63,7 +63,7 @@ a {
 @include adaptive($mob) {
   .wrapper {
     overflow: hidden;
-    height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;

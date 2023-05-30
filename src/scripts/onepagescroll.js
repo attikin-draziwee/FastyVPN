@@ -56,7 +56,7 @@ const isSafari = md.userAgent() == 'Safari';
     }
   };
 
-if (isOnlyMobile) {
+if (isOnlyMobile && !isSafari) {
   const wheeldelta = {
     x: 0,
     y: 0
@@ -81,23 +81,6 @@ if (isOnlyMobile) {
     wheeldelta.x += e.deltaFactor * e.deltaX;
     wheeldelta.y += e.deltaFactor * e.deltaY;
   });
-
-  if(isSafari) {
-    console.log('is Safari');
-    $('.container').css("paddingBlock", "1rem");
-    $('.container').css("paddingBottom","8rem");
-    $('.hero__promo').css("height", "50vh");
-    $('.comparison__list').css("font-size", "3vmin")
-    $(".heading").css("font-size","2rem");
-    $(".heading").css("margin-left","4rem");
-    $(".how__promo-content").css("width", "50vw");
-    $(".how__img").css("left", "38%");
-    $(".how__video").css({
-      "width" : "46vw",
-      "left" : "55%",
-      "top": "-9%"
-    })
-  }
 
   // $(window).on('mousewheel', e => {
   //   const deltaY = e.originalEvent.deltaY;
@@ -128,6 +111,7 @@ if (isOnlyMobile) {
   })
   
   if (isMobile) {
+    $(".wrapper").css("height","100%");
     $(".wrapper-content").swipe({
       swipe: function (event, direction) {
         if (direction == 'up')

@@ -21,9 +21,14 @@ hamburger.addEventListener('click', e => {
   });
 
   overlay.addEventListener('click', e => {
+    if (!isSafari) {
     e.preventDefault();
+    }
     if (e.target.classList.contains('menu__link')) {
-      scrollTo($(e.target).attr('data-to'));
+      if (!isSafari) {
+        scrollTo($(e.target).attr('data-to'));
+      } else {
+      }
       close.click();
     } else if (e.target == overlay) {
       close.click();
