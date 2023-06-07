@@ -28,3 +28,9 @@ append scripts
         li.menu__item: a.menu__link(href="#price" data-to=".price") Тариф
         li.menu__item: a.menu__link(href="#faq" data-to=".faq") FAQ
         li.menu__item: a.menu__link(href="#final" data-to=".final") Бонус
+  script(type="html/template" id="qrcode")
+    a(href="#" class="close overlay__close")
+      svg.close__icon
+        use(xlink:href="sprite.svg#close")
+    nav.menu.overlay__menu
+      svg.qrcode: use(xlink:href="sprite.svg#qrcode")

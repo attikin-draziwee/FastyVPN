@@ -35,8 +35,8 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 38vw;
-            @include adaptive($mob) {
+            width: 70vmin;
+            @include adaptive($tablet) {
                 width: 44vw;
             }
         }
@@ -54,10 +54,10 @@
         position: absolute;
         left: 50%;
         top: 1.75%;
-        width: 13.3vw;
+        width: 24.5vmin;
         border-radius: 2vw;
         @include adaptive($tablet) {
-            width: 41vw;
+            width: 41vmin;
             left: 68%;
             top: -10%;
             transform: translateY(21%);

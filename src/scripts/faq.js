@@ -16,11 +16,3 @@ teamList.addEventListener('click', e => {
 }
 );
 
-function containsClass(className, event) {
-  if (event.classList.contains(className))
-    event.classList.remove(className);
-  else {
-    clearClass(className);
-    event.classList.add(className);
-  }
-}

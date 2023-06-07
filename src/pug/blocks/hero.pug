@@ -5,7 +5,9 @@ section.hero: .container.hero__container
                 h1.heading.heading-one.hero__heading VPN в Вашем #[span.heading--tg Telegram]
                 p.subtitle.hero__subtitle Самое безопасное решение в защите Вашей конфиденциальности и анонимности стоимостью в&nbsp;#[span.subtitle--increase 🍫]&nbsp;на&nbsp;#[span.subtitle--increase 🖐🏻]&nbsp;устройств
             .action
-                .action__desc Получи VPN #[strong БЕСПЛАТНО] на&nbsp;3&nbsp;дня по промокоду: 3DAYSFREE
-                a.CTA.CTA--blue.hero__CTA(href="https://t.me/FastyVpnBot" target="_blank"  title="Открыть чат-бот FastyVPN в Telegram") Перейти в Telegram
+                .action__desc Получи VPN #[strong БЕСПЛАТНО] на&nbsp;3&nbsp;дня по промокоду: #[span.clipboard(style="cursor: pointer; text-decoration: underline;" onclick="copyClipBoard()") 3DAYSFREE]
+                .action__links
+                    a.CTA.CTA--blue.hero__CTA(href="https://t.me/FastyVpnBot" target="_blank"  title="Открыть чат-бот FastyVPN в Telegram") Перейти в Telegram
+                    button.CTA.CTA--blue.qr.hero__qr(title="Открыть QR-Код FastyVPN в Telegram"): svg.qr: use(xlink:href="sprite.svg#qrcode")
         .hero__promo
-            img.hero__img(alt="Телеграм бот FastyVPN" src="img/hero/phone.webp")
+                img.hero__img(alt="Телеграм бот FastyVPN" src="img/hero/phone.webp")

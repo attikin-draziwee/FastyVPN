@@ -1,14 +1,13 @@
 'use strict';
-const hamburger = document.querySelector('.hamburger');
 
-hamburger.addEventListener('click', e => {
+$('.qr').on("click", (e) => {
   isModal = true;
   const body = document.body;
   body.classList.add('locked');
   e.preventDefault();
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
-  overlay.innerHTML = document.querySelector('#overlay').innerHTML;
+  overlay.innerHTML = document.querySelector('#qrcode').innerHTML;
   body.append(overlay);
   const close = overlay.querySelector('.overlay__close');
   close.addEventListener('click', e => {
@@ -24,4 +23,4 @@ hamburger.addEventListener('click', e => {
       close.click();
     }
   });
-});
+})

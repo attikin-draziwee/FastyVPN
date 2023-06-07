@@ -67,7 +67,7 @@
         }
     }
     &__img {
-        height: 80%;
+        height: 100%;
         @include adaptive($laptop) {
             height: 70vmin;
         }
@@ -76,11 +76,20 @@
         }
     }
     &__CTA {
-        white-space: nowrap;
+        font-size: 2.6vmin;
         @include adaptive($tablet) {
             white-space:normal;
-            font-size: 2.2vmax;
+            font-size: 2vmax;
         }
+    }
+    &__qr {
+        width: 7vmin;
+        height: 7vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .5em;
     }
 }
 
@@ -88,6 +97,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    &__links {
+        gap: .3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
     &__desc {
         font-size: 1rem;
         line-height: 1.2em;

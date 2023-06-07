@@ -48,7 +48,7 @@ a {
 
 .container {
   width: max(calc(100vw - 5rem), 90%);
-  padding-block: 1.3rem;
+  padding-block: 4.5rem 1.3rem;
   max-height: 100vh;
   height: 100vh;
   margin: 0 auto;
@@ -140,7 +140,9 @@ a {
 .CTA {
   white-space: nowrap;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.7em ;
   background-color: $orange;
   border-radius: 2.5rem;
@@ -194,6 +196,16 @@ a {
 .link {
   text-decoration: underline;
   color: $blue;
+}
+
+.qr {
+  @include adaptive($tablet) {
+    display: none !important;
+  }
+  &__icon {
+    width: inherit;
+    height: inherit;
+  }
 }
 
 .owl {

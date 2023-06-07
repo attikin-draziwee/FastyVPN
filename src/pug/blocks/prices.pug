@@ -11,7 +11,9 @@ section.price#price: .container.price__container
                         ul.comparison__list 
                             li Простая установка за 3 минуты
                             li До 5 устройств 
-                    a.CTA.CTA--blue.price__CTA(href="https://t.me/FastyVpnBot" target="_blank"  title="Открыть чат-бот FastyVPN в Telegram") Перейти в Telegram
+                    .price__links
+                        a.CTA.CTA--blue.price__CTA(href="https://t.me/FastyVpnBot" target="_blank"  title="Открыть чат-бот FastyVPN в Telegram") Перейти в Telegram
+                        button.CTA.CTA--blue.qr.price__qr(title="Открыть QR-Код FastyVPN в Telegram"): svg.qr__icon: use(xlink:href="sprite.svg#qrcode")
             li.price__item
                 header.price__header
                     .price__img: img.price__icon(src="img/prices/icons/gift.webp" alt="Иконка ракеты")
@@ -35,4 +37,6 @@ section.price#price: .container.price__container
                             li 🤗 Простая установка за 3 минуты
                             li 😏 Неограниченное количество устройств
                             li 😎 Собственный выделенный сервер
-                    a.CTA.CTA--blue.price__CTA(href="https://t.me/FastyVpnBot" target="_blank" title="Открыть чат-бот FastyVPN в Telegram") Перейти в Telegram
+                    .price__links
+                        a.CTA.CTA--blue.price__CTA(href="https://t.me/FastyVpnBot" target="_blank" title="Открыть чат-бот FastyVPN в Telegram") Перейти в Telegram
+                        button.CTA.CTA--blue.qr.price__qr(title="Открыть QR-Код FastyVPN в Telegram"): svg.qr__icon: use(xlink:href="sprite.svg#qrcode")

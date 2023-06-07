@@ -20,7 +20,7 @@
         z-index: 10;
         width: 90vw;
         max-height: none;
-        height: 8vh;
+        height: 6vh;
         left: 50%;
         top: 3%;
         transform: translateX(-50%);
@@ -47,12 +47,15 @@
             flex-grow: 0;
         }
         &-img {
-            width: 3.75rem;
+            width: 2rem;
             height: inherit;
+            @include adaptive($tablet) {
+                width: 4rem;
+            }
         }
     }
     &__nav {
-        flex-grow: 9;
+        flex-grow: 12;
         @include adaptive($tablet) {
             display: none;
         }
